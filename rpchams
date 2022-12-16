@@ -1,0 +1,15 @@
+getgenv().Color = Color3.fromRGB(141, 115, 245)
+getgenv().Material = Enum.Material.ForceField
+        
+        for i, v in pairs(workspace.CurrentCamera.Weapon.Arms:GetChildren()) do
+            if (v.Name ~= "Left" or v.Name ~= "Right") then
+                if (v:IsA("Model")) then
+                    for i2, v2 in pairs(v:GetChildren()) do
+                        if (v2:IsA("MeshPart") or v2:IsA("BasePart")) then
+                            v2.Color = getgenv().Color
+                            v2.Material = getgenv().Material
+                        end
+                    end
+                end
+            end
+            end
